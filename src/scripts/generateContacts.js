@@ -3,10 +3,12 @@ import { readContacts } from '../utils/readContacts.js';
 import { writeContacts } from '../utils/writeContacts.js';
 
 const generateContacts = async (number) => {
-  const contacts = createFakeContact();
-  const array = await readContacts();
-  array.push(contacts);
-  writeContacts(array);
+  for (let index = 0; index < number; index++) {
+    const contacts = createFakeContact();
+    const array = await readContacts();
+    array.push(contacts);
+    writeContacts(array);
+  }
 };
 
 generateContacts(5);
