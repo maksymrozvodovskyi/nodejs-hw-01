@@ -6,7 +6,7 @@ export const removeLastContact = async () => {
   if (contacts.length > 0) {
     contacts.splice(-1, 1);
   } else {
-    console.log('No contacts yet!');
+    console.log('No can`t do this');
   }
   await writeContacts(contacts);
 };
