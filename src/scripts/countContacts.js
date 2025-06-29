@@ -2,11 +2,10 @@ import { readContacts } from '../utils/readContacts.js';
 
 export const countContacts = async () => {
   const contacts = await readContacts();
-  if (contacts > 0) {
-    const count = contacts.length;
-    return count;
+  if (contacts.length > 0) {
+    return contacts.length;
   } else {
-    console.log('No contacts yet!');
+    return 0;
   }
 };
 
